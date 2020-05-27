@@ -1,0 +1,18 @@
+.vertical{
+    text-align:center;
+    padding:10rem;
+}
+
+.navbar{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.navbar li{
+    display:inline;
+    margin: 0 5rem;
+}
+.navbar li:last-child{
+    margin-right:0;
+}

@@ -6,7 +6,7 @@ import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
+// import Navigation from "../components/Navigation/Navigation";
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import Footer from "../components/Footer/Footer";
 import MainHeader from "../components/MainHeader/MainHeader";
@@ -18,6 +18,7 @@ import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "../components/layout";
+import "./index.css"
 
 class IndexTemplate extends React.Component {
   state = {
@@ -61,11 +62,11 @@ class IndexTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Drawer className="home-template" isOpen={this.state.menuOpen}>
-          <Helmet title={config.siteTitle} />
+          {/* <Helmet title={config.siteTitle} /> */}
           <SEO postEdges={nodes} />
 
-          {/* The blog navigation links */}
-          <Navigation config={config} onClose={this.handleOnClose} />
+          {/* The blog navigation links */} 
+          {/* <Navigation config={config} onClose={this.handleOnClose} /> */}
 
           <SiteWrapper>
             {/* All the main content gets inserted here */}
@@ -74,10 +75,14 @@ class IndexTemplate extends React.Component {
               <MainHeader cover={config.siteCover}>
                 <MainNav overlay={config.siteCover}>
                   <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
-                  <MenuButton
+                  {/* <MenuButton
                     navigation={config.siteNavigation}
                     onClick={this.handleOnClick}
-                  />
+                  /> */}
+                  <ul className="navbar">
+                    <li className="projects">Projects</li>
+                    <li className="blog">Blog</li>
+                  </ul>
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
